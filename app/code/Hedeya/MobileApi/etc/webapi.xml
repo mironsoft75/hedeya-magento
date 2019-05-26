@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/screen/home" method="GET">
+        <service class="Hedeya\MobileApi\Api\Service\HomeInterface" method="get"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/categories/:categoryId/filters" method="GET">
+        <service class="Hedeya\MobileApi\Api\Service\CatalogInterface" method="getFiltersList" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+    <route url="/V1/categories/:categoryId/sorters" method="GET">
+        <service class="Hedeya\MobileApi\Api\Service\CatalogInterface" method="getSortersList" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+    <route url="/V1/catalog/bestseller" method="GET">
+        <service class="Hedeya\MobileApi\Api\Service\CatalogInterface" method="getCatalogListBestseller" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+    <route url="/V1/categories/tree" method="GET">
+        <service class="Hedeya\MobileApi\Api\Service\CatalogInterface" method="getCatalogCategoryTree" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+    <route url="/V1/catalog/search/suggest/:queryText" method="GET">
+        <service class="Hedeya\MobileApi\Api\Service\CatalogInterface" method="getSearchSuggestions" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/catalog/search/brand/:name" method="GET">
+        <service class="Hedeya\MobileApi\Api\Service\CatalogInterface" method="searchCatalogByBrand" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

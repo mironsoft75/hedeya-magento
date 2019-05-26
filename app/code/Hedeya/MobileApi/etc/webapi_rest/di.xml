@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- <type name="Magento\Catalog\Api\ProductRepositoryInterface">
+        <plugin name="HedeyaMobileApiCatalogProductRepositoryPlugin" type="Hedeya\MobileApi\Plugin\Catalog\ProductRepositoryPlugin" sortOrder="1" disabled="false" />
+    </type> -->
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="HedeyaMobileApiCatalogProductModelPlugin" type="Hedeya\MobileApi\Plugin\CatalogProductPlugin" sortOrder="1" disabled="false" />
+    </type>
+    <type name="Magento\Quote\Api\Data\CartItemInterface">
+        <plugin name="HedeyaMobileApiQuoteItemModelPlugin" type="Hedeya\MobileApi\Plugin\CartItemPlugin" sortOrder="1" disabled="false" />
+    </type>
+    <type name="Magento\Sales\Api\Data\OrderItemInterface">
+        <plugin name="HedeyaMobileApiOrderItemModelPlugin" type="Hedeya\MobileApi\Plugin\OrderItemPlugin" sortOrder="1" disabled="false" />
+    </type>
+</config>

@@ -1,0 +1,36 @@
+<?php
+/**
+ * Created By Ahmed El-Araby at 15/04/19 21:00.
+ */
+
+/**
+ * Created By Ahmed El-Araby at 26/08/18 18:41.
+ */
+
+
+/** @var \Vigor\CustomerMobile\Block\Widget\CustomerMobile $block */
+?>
+
+<?php if ($block->isEnabled()): ?>
+    <div class="fieldset info">
+        <div class="field <?= $block->isRequired() ? 'required' : '' ?>">
+            <label for="customer_mobile" class="label">
+        <span>
+            <?= $block->escapeHtml(__('Mobile')) ?>
+        </span>
+            </label>
+            <div class="control">
+                <?php
+                $_validationClass = $block->getAttributeValidationClass();
+                ?>
+                <input type="text"
+                       name="customer_mobile"
+                       id="customer_mobile"
+                       title="<?= $block->escapeHtmlAttr(__('Mobile')) ?>"
+                       class="input-text <?= $_validationClass ?: '' ?>"
+
+                >
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

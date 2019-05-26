@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © Hedeya. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Backend\Block\Template $block */
+
+?>
+<div id="branches_import" class="hedeya">
+    <form action="<?php echo $block->getUrl('hedeya_branches/index/import'); ?>" method="post" enctype="multipart/form-data">
+        <?php echo $this->getBlockHtml('formkey'); ?>
+        <div class="fieldset admin__field">
+            <!-- <label for="import_branches_file" class="admin__field-label"><span><?= $block->escapeHtml(__('Import Branches from CSV')) ?></span></label> -->
+            <div class="admin__field-control">
+                <input type="file" id="import_branches_file" name="import_branches_file" class="input-file required-entry">
+                <button id="id_ik6E757infqsfhrT4LKakrx2HW1KyKQq" type="submit" title="Import Branches" type="button" class="action-default scalable import-submit" data-ui-id="widget-button-0">
+                    <span><?= $block->escapeHtml(__('Import CSV File')) ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+

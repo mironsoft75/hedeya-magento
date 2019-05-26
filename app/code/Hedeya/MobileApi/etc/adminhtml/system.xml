@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="hedeya_configs" translate="label" type="text" sortOrder="99999" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Hedeya Configurations</label>
+            <tab>general</tab>
+            <resource>Hedeya_MobileApi::configs</resource>
+            <group id="catalog" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label><![CDATA[Catalog Configurations]]></label>
+                <field id="brands_catid" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Brands Category</label>
+                    <source_model>Hedeya\MobileApi\Model\Config\Source\ChildCategory</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

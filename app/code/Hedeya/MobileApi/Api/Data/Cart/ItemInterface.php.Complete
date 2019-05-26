@@ -1,0 +1,84 @@
+<?php
+/**
+ * Copyright © Hedeya. All rights reserved.
+ */
+namespace Hedeya\MobileApi\Api\Data\Cart;
+
+interface ItemInterface
+{
+    const PRODUCT_ID = 'product_id';
+    const THUMBNAIL = 'thumbnail';
+    const CURRENCY = 'currency';
+    const DISCOUNT = 'discount';
+    const FINAL_PRICE = 'final_price';
+    const CONFIGURABLE_OPTIONS = 'configurable_options';
+
+    /**
+     * @return string
+     */
+    public function getThumbnail();
+
+    /**
+     * @param string $thumbnail
+     * @return self
+     */
+    public function setThumbnail($thumbnail);
+    
+    /**
+     * @return int
+     */
+    public function getProductId();
+    
+    /**
+     * @param int $productId
+     * @return self
+     */
+    public function setProductId($productId);
+    
+    /**
+     * @return string
+     */
+    public function getCurrency();
+    /**
+     * @param string $currency
+     * @return self
+     */
+    
+    public function setCurrency($currency);
+    /**
+     * @return double
+     */
+    public function getFinalPrice();
+    
+    /**
+     * @param double $finalPrice
+     * @return self
+     */
+    public function setFinalPrice($finalPrice);
+    
+    /**
+     * @return double
+     */
+    public function getDiscount();
+    
+    /**
+     * @param double $discount
+     * @return self
+     */
+    public function setDiscount($discount);
+    
+    /**
+     * @return Hedeya\MobileApi\Api\Data\Cart\ItemOptionInterface[]
+     */
+    public function getConfigurableOptions();
+    
+    /**
+     * @param Hedeya\MobileApi\Api\Data\Cart\ItemOptionInterface[] $configurableOptions
+     * @return self
+     */
+    public function setConfigurableOptions($configurableOptions);
+
+
+
+
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Hedeya\MirasvitGiftrApi\Api\RegistryProviderInterface" type="Hedeya\MirasvitGiftrApi\Model\RegistryProvider"/>
+    <preference for="Hedeya\MirasvitGiftrApi\Api\Data\RegistryInterface" type="Hedeya\MirasvitGiftrApi\Model\Data\Registry"/>
+    <preference for="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" type="Hedeya\MirasvitGiftrApi\Model\RegistryRepository"/>
+    <preference for="Hedeya\MirasvitGiftrApi\Api\Data\RegistrySearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    <preference for="Hedeya\MirasvitGiftrApi\Api\Data\RegistryItemInterface" type="Hedeya\MirasvitGiftrApi\Model\Data\RegistryItem"/>
+</config>

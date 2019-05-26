@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- get store public registries -->
+    <route url="/V1/giftr" method="GET">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="getList" />
+        <resources>
+            <resource ref="Mirasvit_Giftr::giftr" />
+        </resources>
+    </route>
+    <!-- search store for public registries -->
+    <route url="/V1/giftr/search" method="GET">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryProviderInterface" method="search" />
+        <resources>
+            <resource ref="Mirasvit_Giftr::giftr" />
+        </resources>
+    </route>
+    <!-- get customer registries -->
+    <route url="/V1/giftr/mine" method="GET">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="getListForCustomer" />
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <!-- create registry -->
+    <route url="/V1/giftr/mine" method="POST">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <!-- update registry -->
+    <route url="/V1/giftr/mine" method="PUT">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <!-- delete registry -->
+    <route url="/V1/giftr/:registryId" method="DELETE">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="deleteRegistryById"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <!-- get registry items -->
+    <route url="/V1/giftr/:registryUid/items" method="GET">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="getItems"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="false">%customer_id%</parameter>
+        </data>
+    </route>
+    <!-- create registry item -->
+    <route url="/V1/giftr/:registryUid/items" method="POST">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="saveItem"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <!-- update registry item -->
+    <route url="/V1/giftr/:registryUid/items" method="PUT">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="saveItem"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <!-- delete registry item -->
+    <route url="/V1/giftr/:registryUid/items/:registryItemId" method="DELETE">
+        <service class="Hedeya\MirasvitGiftrApi\Api\RegistryRepositoryInterface" method="deleteItemById"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+</routes>

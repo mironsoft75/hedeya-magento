@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Hedeya_GraphQL" setup_version="0.0.1">
+        <sequence>
+            <module name="Hedeya_MobileApi"/>
+            <module name="Magento_Customer"/>
+            <module name="Magento_Authorization"/>
+            <module name="Magento_GraphQl"/>
+            <module name="Magento_CatalogGraphQL"/>
+        </sequence>
+    </module>
+</config>

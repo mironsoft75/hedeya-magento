@@ -1,0 +1,18 @@
+# Copyright © Hedeya, Inc. All rights reserved.
+# See COPYING.txt for license details.
+
+interface ProductInterface {
+    # final_price: Float @doc(description: "Final price for the product") @resolver(class: "Hedeya\\GraphQl\\Model\\Resolver\\Product\\FinalPrice")
+    brand_data: [AttributeOption] @doc(description: "Product brand data by category IDs") @resolver(class: "Hedeya\\GraphQL\\Model\\Resolver\\Product\\BrandData")
+}
+
+
+type Query {
+    bestsellers(
+        period: String @doc(description: "Specific period to get products from."),
+        pageSize: Int = 20 @doc(description: "Specifies the maximum number of results to return at once. This attribute is optional."),
+        currentPage: Int = 1 @doc(description: "Specifies which page of results to return. The default value is 1."),
+        sort: ProductSortInput @doc(description: "Specifies which attribute to sort on, and whether to return the results in ascending or descending order.")
+    ): Products
+    @resolver(class: "Hedeya\\GraphQL\\Model\\Resolver\\Bestsellers")
+}

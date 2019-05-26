@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">
+        <attribute code="brand_data" type="Hedeya\MobileApi\Api\Data\Catalog\ExtensionOptionInterface[]" />
+        <attribute code="additional_information" type="Hedeya\MobileApi\Api\Data\Catalog\ExtensionOptionInterface[]" />
+    </extension_attributes>
+    <extension_attributes for="Magento\Quote\Api\Data\CartItemInterface">
+        <attribute code="item_data" type="Hedeya\MobileApi\Api\Data\QuoteItemInterface" />
+    </extension_attributes>
+    <extension_attributes for="Magento\Sales\Api\Data\OrderItemInterface">
+        <attribute code="item_data" type="Hedeya\MobileApi\Api\Data\QuoteItemInterface" />
+    </extension_attributes>
+</config>
