@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <creditcardondelivery>
+                <active>1</active>
+                <title>Credit Card On Delivery</title>
+                <order_status>pending_payment</order_status>
+                <instructions/>
+                <payment_action>true</payment_action>
+                <model>Vigor\CreditCardOnDelivery\Model\CreditCardOnDelivery</model>
+                <group>offline</group>
+            </creditcardondelivery>
+        </payment>
+    </default>
+</config>

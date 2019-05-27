@@ -12,7 +12,7 @@
     <type name="Magento\Framework\Url\SecurityInfo">
         <arguments>
             <argument name="secureUrlList" xsi:type="array">
-                <item name="payfortfort" xsi:type="string">/payfortfort/</item>
+                <item name="payfortfort" xsi:type="string">/payfort/</item>
             </argument>
         </arguments>
     </type>

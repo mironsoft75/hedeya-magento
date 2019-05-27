@@ -48,6 +48,6 @@ class hostToHostUrl extends \Magento\Config\Block\System\Config\Form\Field
     }
     
     public function getHostUrl() {
-        return $this->_helper->getReturnUrl('payfortfort/payment/response');
+        return $this->_helper->getReturnUrl('payfort/payment/response');
     }
 }

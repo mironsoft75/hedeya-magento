@@ -4,6 +4,7 @@ return [
         'Magento_Store' => 1,
         'Magento_Directory' => 1,
         'Magento_Theme' => 1,
+        'Aune_ProductGridCategoryFilter' => 1,
         'Magento_Backend' => 1,
         'Hedeya_Branches' => 0,
         'Magento_Variable' => 1,
@@ -210,6 +211,8 @@ return [
         'Hedeya_WishlistApi' => 0,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
+        'Mageplaza_Core' => 1,
+        'Mageplaza_LoginAsCustomer' => 1,
         'Magepotato_Banners' => 0,
         'Mirasvit_Core' => 1,
         'Hedeya_MirasvitGiftrApi' => 0,
@@ -237,6 +240,7 @@ return [
         'Rokanthemes_VerticalMenu' => 0,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
+        'Vigor_CreditCardOnDelivery' => 1,
         'Vigor_CustomerMobile' => 1
     ]
 ];

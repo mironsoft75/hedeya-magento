@@ -77,9 +77,9 @@ class PaymentConfigProvider implements ConfigProviderInterface
                 $config['payment']['payfortFort'][$code]['instructions'] = $this->methods[$code]->getInstructions();
                 if($code == \Payfort\Fort\Model\Method\Cc::CODE || $code == \Payfort\Fort\Model\Method\Installments::CODE) {
                     $config['payment']['payfortFort'][$code]['isMerchantPage'] = $this->methods[$code]->isMerchantPage();
-                    $config['payment']['payfortFort'][$code]['merchantPageUrl'] = $this->urlBuilder->getUrl('payfortfort/payment/merchantPage', ['_secure' => true]);
+                    $config['payment']['payfortFort'][$code]['merchantPageUrl'] = $this->urlBuilder->getUrl('payfort/payment/merchantPage', ['_secure' => true]);
                     if($ccIntegrationType == \Payfort\Fort\Helper\Data::PAYFORT_FORT_INTEGRATION_TYPE_MERCAHNT_PAGE2) {
-                        $config['payment']['payfortFort'][$code]['ajaxUrl']  = $this->pfHelper->getReturnUrl('payfortfort/payment/getPaymentData');
+                        $config['payment']['payfortFort'][$code]['ajaxUrl']  = $this->pfHelper->getReturnUrl('payfort/payment/getPaymentData');
                         $config['payment']['ccform']['availableTypes'][$code] = $this->methods[$code]->getCcAvailableTypes();
                         $config['payment']['ccform']['years'][$code] = $this->methods[$code]->getCcYears();
                         $config['payment']['ccform']['months'][$code] = $this->methods[$code]->getCcMonths();
@@ -102,7 +102,7 @@ class PaymentConfigProvider implements ConfigProviderInterface
      */
     protected function getActionUrl($code)
     {
-        $url = $this->urlBuilder->getUrl('payfortfort/payment/redirect', ['_secure' => true]);
+        $url = $this->urlBuilder->getUrl('payfort/payment/redirect', ['_secure' => true]);
 
         return $url;
     }

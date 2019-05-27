@@ -126,7 +126,7 @@ class Data extends \Magento\Payment\Helper\Data
             $gatewayParams['amount']         = $amount;
             $gatewayParams['customer_email'] = trim( $order->getCustomerEmail() );
             $gatewayParams['command']        = $this->getMainConfigData('command');
-            $gatewayParams['return_url']     = $this->getReturnUrl('payfortfort/payment/responseOnline');
+            $gatewayParams['return_url']     = $this->getReturnUrl('payfort/payment/responseOnline');
             if ($paymentMethod == self::PAYFORT_FORT_PAYMENT_METHOD_SADAD) {
                 $gatewayParams['payment_option'] = 'SADAD';
             }
@@ -141,7 +141,7 @@ class Data extends \Magento\Payment\Helper\Data
         }
         elseif ($integrationType == self::PAYFORT_FORT_INTEGRATION_TYPE_MERCAHNT_PAGE || $integrationType == self::PAYFORT_FORT_INTEGRATION_TYPE_MERCAHNT_PAGE2) {
             $gatewayParams['service_command'] = 'TOKENIZATION';
-            $gatewayParams['return_url']      = $this->getReturnUrl('payfortfort/payment/merchantPageResponse');
+            $gatewayParams['return_url']      = $this->getReturnUrl('payfort/payment/merchantPageResponse');
             if($paymentMethod == self::PAYFORT_FORT_PAYMENT_METHOD_INSTALLMENTS && $integrationType == self::PAYFORT_FORT_INTEGRATION_TYPE_MERCAHNT_PAGE){
                 $baseCurrency                           = $this->getBaseCurrency();
                 $orderCurrency                          = $order->getOrderCurrency()->getCurrencyCode();
@@ -200,7 +200,7 @@ class Data extends \Magento\Payment\Helper\Data
         //send host to host
         $orderId = $order->getRealOrderId();
 
-        $return_url = $this->getReturnUrl('payfortfort/payment/responseOnline');
+        $return_url = $this->getReturnUrl('payfort/payment/responseOnline');
 
         $ip = $this->getVisitorIp();
         $baseCurrency  = $this->getBaseCurrency();

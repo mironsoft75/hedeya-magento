@@ -63,8 +63,6 @@ class CustomerMobile extends \Magento\Customer\Block\Widget\AbstractWidget
         }
     }
 
-    /* Get validation rules 'url validate','max length'*/
-
     public function isRequired()
     {
         return $this->_getAttribute(self::ATTRIBUTE_CODE) ? (bool)$this->_getAttribute(self::ATTRIBUTE_CODE)

@@ -22,7 +22,7 @@
             <div class="field customer_mobile required">
                 <label class="label" for="customer_mobile"><span><?= $block->escapeHtml(__('Mobile')) ?></span></label>
                 <div class="control">
-                    <input type="text" name="customer_mobile" id="customer_mobile" autocomplete="mobile" data-input="change-customer_mobile" value="<?= $block->escapeHtmlAttr($block->getCustomer()->getCustomAttribute('customer_mobile')->getValue()) ?>" title="<?= $block->escapeHtmlAttr(__('Mobile')) ?>" class="input-text <?= $block->getAttributeValidationClass() ?>" />
+                    <input type="text" name="customer_mobile" id="customer_mobile" autocomplete="mobile" data-input="change-customer_mobile" value="<?= $block->escapeHtmlAttr($block->getCustomer()->getCustomAttribute('customer_mobile')? $block->getCustomer()->getCustomAttribute('customer_mobile')->getValue() : '') ?>" title="<?= $block->escapeHtmlAttr(__('Mobile')) ?>" class="input-text <?= $block->getAttributeValidationClass() ?>" />
                 </div>
             </div>
         <?php endif ?>
