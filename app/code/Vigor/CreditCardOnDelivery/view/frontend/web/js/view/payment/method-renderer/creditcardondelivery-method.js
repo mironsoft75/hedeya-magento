@@ -4,7 +4,6 @@ define(
     ],
     function (Component) {
         'use strict';
-        console.log('asdasdassadsa2212312312d');
 
         return Component.extend({
             defaults: {
