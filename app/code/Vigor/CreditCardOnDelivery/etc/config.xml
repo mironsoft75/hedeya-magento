@@ -4,11 +4,10 @@
         <payment>
             <creditcardondelivery>
                 <active>1</active>
-                <title>Credit Card On Delivery</title>
-                <order_status>pending_payment</order_status>
-                <instructions/>
-                <payment_action>true</payment_action>
                 <model>Vigor\CreditCardOnDelivery\Model\CreditCardOnDelivery</model>
+                <order_status>pending</order_status>
+                <title>Credit Card On Delivery</title>
+                <allowspecific>0</allowspecific>
                 <group>offline</group>
             </creditcardondelivery>
         </payment>

@@ -8,6 +8,8 @@ define(
         rendererList
     ) {
         'use strict';
+        console.log('asdasdassadsad');
+        console.log(rendererList);
         rendererList.push(
             {
                 type: 'creditcardondelivery',
