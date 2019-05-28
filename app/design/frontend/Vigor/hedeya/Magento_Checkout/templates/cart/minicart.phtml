@@ -63,7 +63,13 @@
 </div>
 
 <div data-block="minigiftr" class="minigiftr-wrapper">
-    <a class="action" href="<?php /* @escapeNotVerified */ echo $block->getUrl('giftr/registry'); ?>">
+    <a class="action" href="<?php /* @escapeNotVerified */ echo $block->getUrl('giftr/search/result'); ?>">
         <span class="icon-giftregistry-header"><i class="fa fa-gift">&nbsp;</i></span>
+    </a>
+</div>
+
+<div data-block="miniwishlist" class="minigiftr-wrapper miniwishlist-wrapper">
+    <a class="action" href="<?php /* @escapeNotVerified */ echo $block->getUrl('wishlist'); ?>">
+        <span class="icon-giftregistry-header"><i class="fa fa-heart">&nbsp;</i></span>
     </a>
 </div>
