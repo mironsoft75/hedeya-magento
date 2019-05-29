@@ -1,13 +1,11 @@
 <?php $_brands = $block->getBrandsCollection(); ?>
 <ul class="brands-owl-carousel owl-nav-beside">
     <?php foreach ($_brands as $_brand): ?>
-    <?php foreach ($_brands as $brand): ?>
         <li>
             <a href="<?= $_brand->getUrl() ?>" title="<?= $_brand->getName() ?>">
                 <img src="<?= $_brand->getImageUrl('brand_logo') ?>" alt="<?= $_brand->getName() ?>">
             </a>
         </li>
-    <?php endforeach; ?>
     <?php endforeach; ?>
 </ul>
 
