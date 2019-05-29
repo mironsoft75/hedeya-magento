@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Rokanthemes\Brand\Model\Brand" type="Vigor\RokanBrand\Model\Brand"></preference>
+    <preference for="Rokanthemes\Brand\Block\Adminhtml\Brand\Edit\Tab\Main" type="Vigor\RokanBrand\Block\Adminhtml\Brand\Edit\Tab\Main"></preference>
+    <preference for="Rokanthemes\Brand\Block\Adminhtml\Brand\Edit\Tabs" type="Vigor\RokanBrand\Block\Adminhtml\Brand\Edit\Tabs"></preference>
+</config>
