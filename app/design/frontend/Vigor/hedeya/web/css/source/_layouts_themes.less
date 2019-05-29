@@ -4007,3 +4007,30 @@ body {
 .brandowl-play .brand-item{
 	margin: 0;
 }
+
+.owl-nav-beside.owl-theme .owl-buttons {
+	top: 40%;
+}
+.owl-nav-beside {
+	&.owl-theme {
+		.owl-controls .owl-buttons {
+			& > div {
+				position: absolute;
+				width: 35px;
+				height: 35px;
+				&:before {
+					font-size: 2.5rem;
+				}
+			}
+			.owl-prev {
+				left: -30px;
+				&:after {
+					content: none;
+				}
+			}
+			.owl-next {
+				right: -30px;
+			}
+		}
+	}
+}

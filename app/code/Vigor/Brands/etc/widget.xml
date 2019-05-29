@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Vigor\Brands\Block\Widget\Carousel" id="vigor_brands_carousel_widget">
+        <label>Brands Carousel Widget</label>
+        <description />
+    </widget>
+</widgets>
