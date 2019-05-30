@@ -4,6 +4,7 @@
     <module name="Vigor_Giftr" setup_version="0.1.0">
         <sequence>
             <module name="Mirasvit_Giftr"/>
+            <module name="Mageplaza_LoginAsCustomer"/>
         </sequence>
     </module>
 </config>

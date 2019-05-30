@@ -2,7 +2,7 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Customer:etc/sections.xsd">
-    <action name="mploginascustomer/login/index">
+    <action name="vigor_giftr/update/index">
         <section name="gift-registry"/>
     </action>
 </config>
