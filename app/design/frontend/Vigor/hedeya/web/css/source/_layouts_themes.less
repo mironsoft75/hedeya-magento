@@ -2456,16 +2456,18 @@ body {
 		label{
 			font-size: 13px;
 			color: #333;
-			margin-bottom: 10px;
-    		margin-top: 20px;
-		}	
+			display: inline-block;
+		}
 		select {
 			border: 1px solid #eee;
 		    height: 46px;
 		    line-height: 46px;
 		    padding: 0 10px;
 		    color: #7b7b7b;
-		}	
+		}
+		.radio, .checkbox {
+			display: inline;
+		}
 	}
 	.product-slider-wrapper {
 		border: 1px solid #e1e1e1;
@@ -2659,9 +2661,10 @@ body {
 		float: left;
 		width: 100%;
 		.action.tocart{
-		    border: none;
-		    border-radius: 0px;
-		    box-shadow: none;
+			border: solid 1px #e1e1e1;
+			color: #a7a7a7;
+			background: transparent;
+			box-shadow: none;
 		    display: inline-block;
 		    border-radius: 3px;
 		    font-weight: 600;
@@ -2673,6 +2676,11 @@ body {
 		    padding: 0 25px;
 		    height: 40px;
 		    line-height: 40px;
+			&:hover {
+				background: @maincolor;
+				border-color: #eb4697;
+				color: #fff;
+			}
 		}
 		.field.qty{
 			display: inline-block;
@@ -4032,5 +4040,40 @@ body {
 				right: -30px;
 			}
 		}
+	}
+}
+
+.cart.table-wrapper .actions-toolbar > .action {
+	&.action-edit {
+		&>span {
+			display: none;
+		}
+		&:before {
+			content: "\f040";
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+	&.action-delete {
+		&>span {
+			display: none;
+		}
+		&:before {
+			content: "\f00d";
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+}
+
+.gift-registry-form {
+	.field.is_public {
+		display: none;
 	}
 }
