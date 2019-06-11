@@ -2,53 +2,12 @@
 //  * Copyright © 2016 TuanHatay. All rights reserved.
 //  */
 
-.nav-sections {
-  background: transparent;
-  margin: 0;
-}
-.custommenu.navigation {
-  background: transparent;
-}
-.navigation .level0 {
-  margin: 0;
-}
+& when (@media-common = true) {
 
-.navigation .level0 > .level-top {
-  color: @whitecolor;
 }
-
-.navigation .level0.parent > .level-top {
-  padding: 0 15px;
-}
-
-.navigation .level0 > .level-top:hover, .navigation .level0 > .level-top.ui-state-focus {
-  color: @maincolor;
-}
-
-.main-nav > ul li.level0:hover > a.level-top {
-  color: @maincolor;
-}
-
-.navigation .level0 .submenu {
-  font-weight: normal;
-}
-
-//.navigation .level0 .submenu a {
-//  color: @maincolor;
-//}
-
-.custommenu.navigation li.level0.fullwidth .submenu a:hover > span, .custommenu.navigation li.level0.staticwidth .submenu a:hover > span {
-  text-decoration: none;
-}
-.navigation .level0 .submenu a:hover {
-  color: @maincolor;
-}
-
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   .custommenu.navigation {
-    background: transparent;
-
     > ul {
       position: relative;
 
@@ -207,8 +166,9 @@
           &:nth-child(4n+1) {
             clear: both;
           }
-          &:not(:nth-child(4n+4)) {
-            border-right: solid 1px #f1f1f1;
+
+          &:not(:nth-child(4n+1)) {
+            border-left: solid 1px #f1f1f1;
           }
         }
       }
@@ -295,17 +255,6 @@
         }
       }
 
-      &:not(:first-child) {
-        &.fullwidth, &.staticwidth {
-          li.level1 {
-            > a {
-              font-weight: bold;
-              color: @maincolor;
-            }
-          }
-        }
-      }
-
       &.fullwidth, &.staticwidth {
         > .submenu {
           padding: 5px 8px 15px;
@@ -386,6 +335,41 @@
                 color: #fff;
                 text-decoration: none;
                 opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+
+      &:not(:first-child) {
+        &.fullwidth, &.staticwidth {
+          li.view-all {
+            > a {
+              margin-top: 0;
+              margin-bottom: 0;
+
+              > span {
+                padding: 7px 10px;
+                background: #eb4697;
+                border-radius: 5px;
+                margin-top: 6px;
+                display: inline-block;
+                color: white;
+
+                &:hover {
+                  color: #ba3777;
+                }
+              }
+            }
+          }
+
+          li.level1 {
+            > a {
+              font-weight: 700;
+              color: #eb4697;
+
+              &:hover {
+                color: #ba3777;
               }
             }
           }

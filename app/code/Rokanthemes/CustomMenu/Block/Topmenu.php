@@ -151,6 +151,10 @@ class Topmenu extends \Magento\Framework\View\Element\Template
                     $rt_menu_font_icon = $cat_model->getData('rt_menu_font_icon');
 
                     $item_class = 'level'.$level.' ';
+                    if (stripos(strtolower($cat_model->getName()), 'view') !== false && stripos(strtolower($cat_model->getName()), 'all') !== false) {
+                        $item_class .= 'view-all ';
+                    }
+
                     if(count($sub_children) > 0)
                         $item_class .= 'parent ';
                     $html .= '<li class="ui-menu-item '.$item_class.'">';
