@@ -31,13 +31,12 @@ class UpdateProductsCron implements ERPCronInterface
             $currentYear = new \DateTime();
             $currentYear->setDate($currentYear->format('Y'), 1, 1);
             $data = [
-                $currentYear->format('Y-m-d'),
-                1
+                $currentYear->format('Y-m-d')
             ];
         }
 
         $dateTime = new \DateTime($data[0]);
 
-        $this->catalogPublisher->addProductsToQueue($dateTime, $data[1]);
+        $this->catalogPublisher->addProductsToQueue($dateTime);
     }
 }
