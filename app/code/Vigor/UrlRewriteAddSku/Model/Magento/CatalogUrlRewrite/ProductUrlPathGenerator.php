@@ -10,7 +10,7 @@ class ProductUrlPathGenerator extends \Magento\CatalogUrlRewrite\Model\ProductUr
     protected function prepareProductUrlKey(\Magento\Catalog\Model\Product $product)
     {
         $urlKey = $product->getUrlKey();
-        return $product->formatUrlKey($urlKey === '' || $urlKey === null ? $product->getName().'-'.$product->getSku() : $urlKey);
+        return $product->formatUrlKey($urlKey === '' || $urlKey === null ? $product->getSku().'-'.$product->getName() : $urlKey);
     }
 
 }
