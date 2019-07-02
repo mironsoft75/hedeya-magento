@@ -69,8 +69,10 @@ class ProductMapper implements MapperInterface
                     $criteria = $this->searchCriteriaBuilder->addFilter(ERPProductInterface::ERP_ID_ATTRIBUTE, (string)$item->ItemSID)->create();
                     $result = $this->productRepository->getList($criteria);
                     if ($result->getTotalCount()) {
-                        $existingProduct = $result->getItems();
-                        $existingProduct = $existingProduct[0];
+                        $existingProducts = $result->getItems();
+                        if (isset($existingProducts[0])) {
+                            $existingProduct = $existingProducts[0];
+                        }
                     }
                 }
 
