@@ -168,7 +168,7 @@ class Topmenu extends \Magento\Framework\View\Element\Template
                     if ($level > 1 && $rt_menu_icon_img)
                         $html .= '<img class="menu-thumb-icon" src="' . $this->_helper->getBaseUrl().'catalog/category/' . $rt_menu_icon_img . '" alt="'.$child->getName().'"/>';
                     elseif($rt_menu_font_icon)
-                        $html .= '<em class="menu-thumb-icon '.rt_menu_font_icon.'"></em>';
+                        $html .= '<em class="menu-thumb-icon '.$rt_menu_font_icon.'"></em>';
                     $html .= '<span>'.$child->getName();
                     if($rt_menu_cat_label)
                         $html .= '<span class="cat-label cat-label-'.$rt_menu_cat_label.'">'.$this->_custommenuConfig['cat_labels'][$rt_menu_cat_label].'</span>';

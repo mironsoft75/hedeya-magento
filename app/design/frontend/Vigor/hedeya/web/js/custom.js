@@ -16,7 +16,7 @@ require([
             slideSpeed : 500,
             paginationSpeed : 500,
             rewindSpeed : 500,
-            navigation : false,
+            navigation : true,
             stopOnHover : true,
             pagination :false,
             scrollPerPage:true,

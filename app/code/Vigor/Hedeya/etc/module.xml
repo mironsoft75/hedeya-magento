@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Vigor_Hedeya" setup_version="1.0.0">
+        <sequence>
+            <module name="Rokanthemes_BestsellerProduct"/>
+            <module name="Rokanthemes_Featuredpro"/>
+            <module name="Rokanthemes_Newproduct"/>
+            <module name="Rokanthemes_Onsaleproduct"/>
+            <module name="Rokanthemes_ProductTab"/>
+
+        </sequence>
+    </module>
+</config>

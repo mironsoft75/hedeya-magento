@@ -7,9 +7,19 @@ namespace Vigor\HedeyaRetailProBridge\Model\Connector;
 
 use Vigor\HedeyaRetailProBridge\Api\ConnectorInterface;
 
+/**
+ * Class CatalogConnector
+ * @package Vigor\HedeyaRetailProBridge\Model\Connector
+ */
 class CatalogConnector implements ConnectorInterface
 {
+    /**
+     *
+     */
     public const MODIFIED_PRODUCTS_URI = 'http://197.50.45.113:8090/wsdl/IRPWebServices';
+    /**
+     *
+     */
     private const TIMEOUT_SECONDS = 1800;
     /**
      * Http Client Factory
@@ -18,6 +28,10 @@ class CatalogConnector implements ConnectorInterface
      */
     protected $soapClient;
 
+    /**
+     * CatalogConnector constructor.
+     * @throws  \SoapFault
+     */
     public function __construct()
     {
         $this->soapClient = new \SoapClient(self::MODIFIED_PRODUCTS_URI, array(
@@ -31,6 +45,11 @@ class CatalogConnector implements ConnectorInterface
         ));
     }
 
+    /**
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $endDate
+     * @return mixed
+     */
     public function getModifiedProducts(\DateTimeInterface $startDate, \DateTimeInterface $endDate)
     {
         return $this->soapClient->__soapCall(

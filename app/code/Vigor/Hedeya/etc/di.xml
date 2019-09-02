@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Rokanthemes\Featuredpro\Block\Featured"
+                type="Vigor\Hedeya\Rokanthemes\Featuredpro\Block\Featured"/>
+    <preference for="Rokanthemes\BestsellerProduct\Block\Bestseller"
+                type="Vigor\Hedeya\Rokanthemes\BestsellerProduct\Block\Bestseller" />
+    <preference for="Rokanthemes\MostviewedProduct\Block\Mostviewed"
+                type="Vigor\Hedeya\Rokanthemes\MostviewedProduct\Block\Mostviewed" />
+    <preference for="Rokanthemes\Newproduct\Block\Newproduct"
+                type="Vigor\Hedeya\Rokanthemes\Newproduct\Block\Newproduct" />
+    <preference for="Rokanthemes\Onsaleproduct\Block\Onsaleproduct"
+                type="Vigor\Hedeya\Rokanthemes\Onsaleproduct\Block\Onsaleproduct" />
+    <preference for="Magento\CatalogSearch\Block\SearchResult\ListProduct" type="Amasty\Xsearch\Block\Search\Product" />
+    <preference for="Amasty\Xsearch\Block\Search\Product"
+                type="Vigor\Hedeya\Override\Amasty\Xsearch\Block\Search\Product" />
+</config>

@@ -8,12 +8,31 @@ namespace Vigor\HedeyaRetailProBridge\Model\Bridge;
 use Vigor\ERPIntegrator\Api\ERPCatalogBridgeInterface;
 use Vigor\HedeyaRetailProBridge\Model\Connector\CatalogConnector;
 
+/**
+ * Class CatalogBridge
+ * @package Vigor\HedeyaRetailProBridge\Model\Bridge
+ */
 class CatalogBridge implements ERPCatalogBridgeInterface
 {
+    /**
+     * @var CatalogConnector
+     */
     protected $catalogConnector;
+    /**
+     * @var \Vigor\HedeyaRetailProBridge\Model\Mapper\ProductMapper
+     */
     protected $productMapper;
+    /**
+     * @var \Magento\Framework\Serialize\Serializer\Json
+     */
     protected $jsonSerializer;
 
+    /**
+     * CatalogBridge constructor.
+     * @param CatalogConnector $catalogConnector
+     * @param \Vigor\HedeyaRetailProBridge\Model\Mapper\ProductMapper $productMapper
+     * @param \Magento\Framework\Serialize\Serializer\Json $jsonSerializer
+     */
     public function __construct(
         CatalogConnector $catalogConnector,
         \Vigor\HedeyaRetailProBridge\Model\Mapper\ProductMapper $productMapper,
@@ -25,6 +44,11 @@ class CatalogBridge implements ERPCatalogBridgeInterface
     }
 
 
+    /**
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $endDate
+     * @return array
+     */
     public function getModifiedProducts(\DateTimeInterface $startDate, \DateTimeInterface $endDate): array
     {
         $response = $this->catalogConnector->getModifiedProducts($startDate, $endDate);

@@ -11,7 +11,6 @@
 						<argument name="group_name" xsi:type="string">navigation-sections</argument>
 						<argument name="group_css" xsi:type="string">nav-sections</argument>
 					</arguments>
-					<block class="Rokanthemes\VerticalMenu\Block\Verticalmenu" name="menu.vertical" template="Rokanthemes_VerticalMenu::sidemenu.phtml" group="navigation-sections" ttl="3600" before="-"/>
 				</block>
             </block>
         </referenceContainer>

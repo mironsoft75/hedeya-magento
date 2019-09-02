@@ -117,6 +117,7 @@ class Producttab extends \Magento\Catalog\Block\Product\AbstractProduct
             ->addUrlRewrite($category->getId())
             ->setVisibility($this->productVisibility->getVisibleInCatalogIds());
 		$products->addAttributeToFilter('featured', 1);
+        $products->setFlag('has_stock_status_filter');
         $products->setPageSize($this->getConfig('qty'))->setCurPage(1);
 		$this->_eventManager->dispatch(
             'catalog_block_product_list_collection',
@@ -146,6 +147,7 @@ class Producttab extends \Magento\Catalog\Block\Product\AbstractProduct
             ->addTaxPercents()
             ->addUrlRewrite($category->getId())
             ->setVisibility($this->productVisibility->getVisibleInCatalogIds());
+		$products->setFlag('has_stock_status_filter');
 		$todayDate= date('Y-m-d', time());
 		$products->addAttributeToFilter('special_to_date', array('date'=>true, 'from'=> $todayDate));
         $products->setPageSize($this->getConfig('qty'))->setCurPage(1);
