@@ -15,4 +15,6 @@
     <preference for="Magento\CatalogSearch\Block\SearchResult\ListProduct" type="Amasty\Xsearch\Block\Search\Product" />
     <preference for="Amasty\Xsearch\Block\Search\Product"
                 type="Vigor\Hedeya\Override\Amasty\Xsearch\Block\Search\Product" />
+    <preference for="Mirasvit\Giftr\Block\Item\Manage"
+                type="Vigor\Hedeya\Override\Mirasvit\Giftr\Block\Item\Manage"></preference>
 </config>
