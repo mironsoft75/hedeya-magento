@@ -10,22 +10,24 @@
 ?>
 
 <div data-block="minicart" class="minicart-wrapper">
-    <a class="action showcart" href="<?php /* @escapeNotVerified */ echo $block->getShoppingCartUrl(); ?>"
+    <a class="action showcart" href="<?php /* @escapeNotVerified */
+    echo $block->getShoppingCartUrl(); ?>"
        data-bind="scope: 'minicart_content'">
-		<span class="icon-cart-header"><i class="fa fa-cart-plus">&nbsp;</i></span>
-        <span class="text-cart"><?php /* @escapeNotVerified */ echo __('Your Cart'); ?></span>
+        <span class="icon-cart-header"><i class="fa fa-cart-plus">&nbsp;</i></span>
+        <span class="text-cart"><?php /* @escapeNotVerified */
+            echo __('Your Cart'); ?></span>
         <span class="counter qty empty"
               data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
             <span class="counter-number">
                 <!-- ko text: getCartParam('summary_count') -->
-                    <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
                 <!-- /ko -->
             </span>
             <span class="counter-label">
             <!-- ko if: getCartParam('summary_count') -->
                 <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
                 <!-- ko i18n: 'items' --><!-- /ko -->
-            <!-- /ko -->
+                <!-- /ko -->
             </span>
         </span>
     </a>
@@ -53,23 +55,44 @@
     <script type="text/x-magento-init">
     {
         "[data-block='minicart']": {
-            "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout();?>
+            "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */
+        echo $block->getJsLayout(); ?>
         },
         "*": {
-            "Magento_Ui/js/block-loader": "<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+            "Magento_Ui/js/block-loader": "<?php /* @escapeNotVerified */
+        echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
         }
     }
+
     </script>
 </div>
 
 <div data-block="minigiftr" class="minigiftr-wrapper">
-    <a class="action" href="<?php /* @escapeNotVerified */ echo $block->getUrl('giftr/search/result'); ?>">
+    <a class="action" href="<?php /* @escapeNotVerified */
+    echo $block->getUrl('giftr/search/result'); ?>">
         <span class="icon-giftregistry-header"><i class="fa fa-gift">&nbsp;</i></span>
     </a>
+    <div class="dropdown-content">
+        <ul>
+            <li>
+                <a class="action" href="<?php /* @escapeNotVerified */
+                echo $block->getUrl('giftr/registry/new'); ?>">
+                    <span><?= __('Create gift registry') ?></span>
+                </a>
+            </li>
+            <li>
+                <a class="action" href="<?php /* @escapeNotVerified */
+                echo $block->getUrl('giftr/search/result'); ?>">
+                    <span><?= __('Search gift registries') ?></span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div data-block="miniwishlist" class="minigiftr-wrapper miniwishlist-wrapper">
-    <a class="action" href="<?php /* @escapeNotVerified */ echo $block->getUrl('wishlist'); ?>">
+    <a class="action" href="<?php /* @escapeNotVerified */
+    echo $block->getUrl('wishlist'); ?>">
         <span class="icon-giftregistry-header"><i class="fa fa-heart">&nbsp;</i></span>
     </a>
 </div>
