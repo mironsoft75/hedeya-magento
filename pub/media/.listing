@@ -1,0 +1,13 @@
+drwxrwxr-x   12 hedeya     hedeya           4096 Nov 12 05:23 .
+drwxr-xr-x   16 hedeya     hedeya           4096 Nov 21 08:45 ..
+-rw-rw-r--    1 hedeya     hedeya            553 Oct 28 08:51 .htaccess
+drwxrwxrwx    4 hedeya     hedeya           4096 Nov 13 07:20 catalog
+drwxrwxr-x    2 hedeya     hedeya           4096 Oct 28 08:51 customer
+drwxrwxr-x    2 hedeya     hedeya           4096 Oct 28 08:51 dhl
+drwxrwxr-x    2 hedeya     hedeya           4096 Oct 28 08:51 downloadable
+drwxrwxrwx    3 hedeya     hedeya           4096 Nov  9 05:44 favicon
+drwxr-xr-x    3 hedeya     hedeya           4096 Nov  9 03:26 magentothem
+drwxr-xr-x    3 hedeya     hedeya           4096 Nov  9 03:26 theme
+drwxrwxrwx    3 hedeya     hedeya           4096 Nov 12 05:23 tmp
+drwxr-xr-x    3 hedeya     hedeya           4096 Nov 18 09:03 wysiwyg
+drwxrwxr-x    5 hedeya     hedeya           4096 Oct 28 08:51 xmlconnect
