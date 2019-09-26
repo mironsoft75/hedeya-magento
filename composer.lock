@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab028bd6a7048405e316323e018b43eb",
+    "content-hash": "0c485838d4bd3a30ef1593e56fad4a58",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -9950,6 +9950,94 @@
                 "framework"
             ],
             "time": "2019-07-26T16:43:11+00:00"
+        },
+        {
+            "name": "mageplaza/module-core",
+            "version": "1.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/module-core.git",
+                "reference": "85bfb6ef453471b2cef789dcf23525be8e7b881f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/85bfb6ef453471b2cef789dcf23525be8e7b881f",
+                "reference": "85bfb6ef453471b2cef789dcf23525be8e7b881f",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Mageplaza Core for Magento 2",
+            "time": "2019-08-16T08:51:45+00:00"
+        },
+        {
+            "name": "mageplaza/module-smtp",
+            "version": "1.2.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-smtp.git",
+                "reference": "e4b561126c81dd5c923a834db58a4ac51e9f4007"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-smtp/zipball/e4b561126c81dd5c923a834db58a4ac51e9f4007",
+                "reference": "e4b561126c81dd5c923a834db58a4ac51e9f4007",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Smtp\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "SMTP Extension for Magento 2 helps the owner of store simply install SMTP (Simple Mail Transfer Protocol) server which transmits the messages into codes or numbers",
+            "keywords": [
+                "email settings",
+                "gmail smtp",
+                "magento 2",
+                "magento 2 smtp",
+                "magento smtp",
+                "mageplaza",
+                "smtp"
+            ],
+            "time": "2019-04-16T11:15:23+00:00"
         },
         {
             "name": "monolog/monolog",
