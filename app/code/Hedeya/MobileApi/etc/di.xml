@@ -1,8 +1,44 @@
 <?xml version="1.0" ?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
     <preference for="Hedeya\MobileApi\Api\Service\HomeInterface" type="Hedeya\MobileApi\Model\Service\Home"/>
     <preference for="Hedeya\MobileApi\Api\Service\CatalogInterface" type="Hedeya\MobileApi\Model\Service\Catalog"/>
     <preference for="Hedeya\MobileApi\Api\Data\Catalog\ExtensionOptionInterface" type="Hedeya\MobileApi\Model\Data\ExtensionOption"/>
     <preference for="Hedeya\MobileApi\Api\Data\Catalog\CategoryTreeItemInterface" type="Hedeya\MobileApi\Model\Data\CategoryTreeItem"/>
     <preference for="Hedeya\MobileApi\Api\Data\QuoteItemInterface" type="Hedeya\MobileApi\Model\Data\QuoteItem"/>
+    <!-- Uploading Categories image and icon -->
+    <type name="Hedeya\MobileApi\Controller\Adminhtml\Category\Image\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Hedeya\MobileApi\ImageUploader</argument>
+        </arguments>
+    </type>
+    <virtualType name="Hedeya\MobileApi\ImageUploader" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">catalog/tmp/category</argument>
+            <argument name="basePath" xsi:type="string">catalog/category</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Hedeya\MobileApi\Controller\Adminhtml\Category\Icon\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Hedeya\MobileApi\IconUploader</argument>
+        </arguments>
+    </type>
+    <virtualType name="Hedeya\MobileApi\IconUploader" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">catalog/tmp/category</argument>
+            <argument name="basePath" xsi:type="string">catalog/category</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <preference for="Magento\Catalog\Model\Category\DataProvider" type="Hedeya\MobileApi\Model\Category\DataProvider" />
 </config>
