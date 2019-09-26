@@ -10,7 +10,7 @@ interface WishlistRepositoryInterface
 {
     /**
      * @param int $customerId
-     * @return WishlistInterface
+     * @return \Hedeya\WishlistApi\Api\WishlistInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException If customer with the specified ID does not exist.
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -32,7 +32,7 @@ interface WishlistRepositoryInterface
     /**
      * Get the current customers wishlist
      *
-     * @return WishlistInterface
+     * @return \Hedeya\WishlistApi\Api\WishlistInterface
      * @throws NoSuchEntityException
      */
     public function getCurrentWishlist(): WishlistInterface;
