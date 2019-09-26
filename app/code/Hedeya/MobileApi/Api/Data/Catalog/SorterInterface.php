@@ -7,17 +7,17 @@ namespace Hedeya\MobileApi\Api\Data\Catalog;
 interface SorterInterface
 {
     /**
-     * @return \Magento\Framework\Data\OptionSourceInterface[]
+     * @return \Hedeya\MobileApi\Api\Data\Catalog\OptionValueInterface[]
      */
     public function getDirection();
 
     /**
-     * @return \Magento\Framework\Data\OptionSourceInterface[]
+     * @return int[]
      */
     public function getPageSize();
 
     /**
-     * @return \Magento\Framework\Data\OptionSourceInterface[]
+     * @return \Hedeya\MobileApi\Api\Data\Catalog\OptionValueInterface[]
      */
     public function getSortBy();
 }
