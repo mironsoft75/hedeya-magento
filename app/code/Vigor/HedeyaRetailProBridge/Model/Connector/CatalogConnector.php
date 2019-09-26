@@ -34,15 +34,7 @@ class CatalogConnector implements ConnectorInterface
      */
     public function __construct()
     {
-        $this->soapClient = new \SoapClient(self::MODIFIED_PRODUCTS_URI, array(
-            'debug'              => true,
-            'trace'              => true,
-            'exceptions'         => true,
-            'keep_alive'         => false,
-            'connection_timeout' => self::TIMEOUT_SECONDS,
-            'cache_wsdl'         => WSDL_CACHE_NONE,
-            'compression'        => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
-        ));
+
     }
 
     /**
@@ -52,6 +44,16 @@ class CatalogConnector implements ConnectorInterface
      */
     public function getModifiedProducts(\DateTimeInterface $startDate, \DateTimeInterface $endDate)
     {
+        $this->soapClient = new \SoapClient(self::MODIFIED_PRODUCTS_URI, array(
+            'debug'              => true,
+            'trace'              => true,
+            'exceptions'         => true,
+            'keep_alive'         => false,
+            'connection_timeout' => self::TIMEOUT_SECONDS,
+            'cache_wsdl'         => WSDL_CACHE_NONE,
+            'compression'        => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
+        ));
+
         return $this->soapClient->__soapCall(
             'GetModifidItemsCompQtysInRange',
             ['AdFromDate' => $startDate->format('Y/m/d'), 'AdToDate' => $endDate->format('Y/m/d')]
