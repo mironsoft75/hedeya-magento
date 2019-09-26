@@ -34,23 +34,23 @@ interface BranchInterface
     public function setName($name);
 
     /**
-     * @return Decimal
+     * @return string
      */
     public function getLatitude();
 
     /**
-     * @param Decimal $lat
+     * @param string $lat
      * @return $this
      */
     public function setLatitude($lat);
 
     /**
-     * @return Decimal
+     * @return string
      */
     public function getLongitude();
 
     /**
-     * @param Decimal $longitude
+     * @param string $longitude
      * @return $this
      */
     public function setLongitude($longitude);
