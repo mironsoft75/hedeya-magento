@@ -174,21 +174,21 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             );
         }
 
-        if ($this->getModuleConfig(self::XML_PATH_TEMPLATE_POPULAR_SEARCHES_ENABLED)) {
-            $this->_pushItem(
-                self::XML_PATH_TEMPLATE_POPULAR_SEARCHES_POSITION,
-                $layout->createBlock(Popular::class, 'amasty.xsearch.search.popular'),
-                $result
-            );
-        }
+//        if ($this->getModuleConfig(self::XML_PATH_TEMPLATE_POPULAR_SEARCHES_ENABLED)) {
+//            $this->_pushItem(
+//                self::XML_PATH_TEMPLATE_POPULAR_SEARCHES_POSITION,
+//                $layout->createBlock(Popular::class, 'amasty.xsearch.search.popular'),
+//                $result
+//            );
+//        }
 
-        if ($this->getModuleConfig(self::XML_PATH_TEMPLATE_RECENT_SEARCHES_ENABLED)) {
-            $this->_pushItem(
-                self::XML_PATH_TEMPLATE_RECENT_SEARCHES_POSITION,
-                $layout->createBlock(Recent::class, 'amasty.xsearch.search.recent'),
-                $result
-            );
-        }
+//        if ($this->getModuleConfig(self::XML_PATH_TEMPLATE_RECENT_SEARCHES_ENABLED)) {
+//            $this->_pushItem(
+//                self::XML_PATH_TEMPLATE_RECENT_SEARCHES_POSITION,
+//                $layout->createBlock(Recent::class, 'amasty.xsearch.search.recent'),
+//                $result
+//            );
+//        }
 
         if ($this->getModuleConfig(self::XML_PATH_TEMPLATE_LANDING_ENABLED)
             && $this->_moduleManager->isEnabled('Amasty_Xlanding')
