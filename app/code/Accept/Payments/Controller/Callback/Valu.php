@@ -2,8 +2,13 @@
 namespace Accept\Payments\Controller\Callback;
 
 use Accept\Payments\Helper\Notify;
+use Magento\Framework\App\Action\HttpGetActionInterface;
+use Magento\Framework\App\Action\HttpPostActionInterface;
+use Magento\Framework\App\CsrfAwareActionInterface;
+use Magento\Framework\App\Request\InvalidRequestException;
+use Magento\Framework\App\RequestInterface;
 
-class Valu extends \Magento\Framework\App\Action\Action {
+class Valu extends \Magento\Framework\App\Action\Action implements HttpPostActionInterface, HttpGetActionInterface, CsrfAwareActionInterface {
 
     public function __construct(
 		\Magento\Framework\App\Action\Context $context, 
@@ -53,5 +58,17 @@ class Valu extends \Magento\Framework\App\Action\Action {
 			die(1);
 		}
 
+
+
 	}
+
+    public function createCsrfValidationException(RequestInterface $request): ?InvalidRequestException
+    {
+        return null;
+    }
+
+    public function validateForCsrf(RequestInterface $request): ?bool
+    {
+        return true;
+    }
 }
