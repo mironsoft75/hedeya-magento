@@ -20,7 +20,7 @@ class CatalogConnector implements ConnectorInterface
     /**
      *
      */
-    private const TIMEOUT_SECONDS = 1800;
+    private const TIMEOUT_SECONDS = 3600;
     /**
      * Http Client Factory
      *
@@ -34,7 +34,7 @@ class CatalogConnector implements ConnectorInterface
      */
     public function __construct()
     {
-
+        ini_set('default_socket_timeout', self::TIMEOUT_SECONDS);
     }
 
     /**

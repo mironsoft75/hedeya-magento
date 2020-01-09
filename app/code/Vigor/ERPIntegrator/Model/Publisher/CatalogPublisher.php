@@ -44,7 +44,7 @@ class CatalogPublisher extends AbstractPublisher
 
         while (true) {
             $endDate = clone $startDate;
-            $endDate->modify('+2 days');
+            $endDate->modify('+1 days');
 
             if ($startDate > $today) {
                 break;
