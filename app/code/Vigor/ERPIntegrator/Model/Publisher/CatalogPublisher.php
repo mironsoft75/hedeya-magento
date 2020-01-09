@@ -53,10 +53,10 @@ class CatalogPublisher extends AbstractPublisher
             $catalogData = $this->catalogBridge->getModifiedProducts($startDate, $endDate);
 
             if (count($catalogData['products'])) {
-                $this->addToQueue($catalogData['products'], self::TOPIC_CATALOG_UPDATE_PRODUCTS, 'ERP Products update');
+                $this->addToQueue($catalogData['products'], self::TOPIC_CATALOG_UPDATE_PRODUCTS, 'ERP Products update - '. $startDate->format('Y-m-d') . ' - ' . $endDate->format('Y-m-d'));
             }
             if (count($catalogData['source_items'])) {
-                $this->addToQueue($catalogData['source_items'], self::TOPIC_CATALOG_UPDATE_PRODUCTS_INVENTORY, 'ERP Products stock update');
+                $this->addToQueue($catalogData['source_items'], self::TOPIC_CATALOG_UPDATE_PRODUCTS_INVENTORY, 'ERP Products stock update - '. $startDate->format('Y-m-d') . ' - ' . $endDate->format('Y-m-d'));
             }
             $this->syncDateHelper->writeSyncData([
                 $startDate->format('Y-m-d')
