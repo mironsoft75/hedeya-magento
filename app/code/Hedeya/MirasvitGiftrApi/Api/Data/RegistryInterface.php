@@ -8,6 +8,7 @@ interface RegistryInterface
 {
     const KEY_ID = "id";
     const KEY_REGISTRY_ID = "registry_id";
+    const KEY_WEBSITE_ID = "website_id";
     const KEY_UID = "uid";
     const KEY_NAME = "name";
     const KEY_ITEMS_COUNT = "items_count";
@@ -132,6 +133,17 @@ interface RegistryInterface
      * @return self
      */
     public function setTypeId($typeId);
+    
+    /**
+     * @return int
+     */
+    public function getWebsiteId();
+
+    /**
+     * @param int $websiteId
+     * @return self
+     */
+    public function setWebsiteId($websiteId);
 
     /**
      * @return string|null

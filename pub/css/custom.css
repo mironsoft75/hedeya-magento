@@ -1,0 +1,320 @@
+﻿@media (max-width: 767px){
+.alpha a {
+    margin-bottom: 10px!important;
+}
+
+.brandslinks li {
+    width: 100%!important;
+}
+
+}
+
+.fbrands{
+background: #F8F8F8;
+    padding: 15px;
+    border-radius: 0px 0px 10px 10px;
+    border-top: solid 3px #e8e8e8;
+   height: auto;
+    overflow: hidden;
+ margin-left: 50px;
+    margin-right: 50px;
+}
+
+.fbrands p{float:left;}
+
+.emp{margin-right:20px;}
+
+.custommenu.navigation .subchildmenu.mega-columns.columns3>li:not(:nth-child(3n+1))  {
+    width: 33.33%;
+   border-left: solid 1px #f1f1f1;
+}
+
+.giftr-container .products-grid .item.event-item {
+    width: 48% !important;
+}
+
+.giftr-container .event-type-item-title {
+    bottom: 0px;
+    height: 100%;
+}
+
+.giftr-container .products-grid .item-title {
+    background: #eb4697a3;
+    height: 100%;
+    line-height: 183px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 26px!important;
+    font-style: normal;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.giftr-container .event-item .event-icon {
+    top: 15px;
+    right: 15px;
+}
+
+.giftr-container .event-item .event-icon .giftr-event-icon {
+    background: rgb(255, 255, 255);
+}
+
+.event-type-item-title:hover {
+    background: #eb4697bf;
+}
+
+.event-type-item-title {
+    transition: all .2s ease-in-out;
+}
+
+.giftr-container .item.event-item {
+    border-radius: 10px;
+}
+
+@media (max-width: 767px){
+
+.giftr-registry-view .products-grid.giftr .product-item {
+    width: 100%;
+margin-bottom:20px;
+}
+.product-item-info {
+    width: 100%;
+}
+
+.product-item:nth-child(2n+1) {
+    margin-left: 7px;
+}
+
+.giftr-container .item.event-item {
+    width: 100% !important; margin-bottom: 10px;}
+
+.giftr-registry-type-general .heading .giftr-search-form-holder .giftr-search-form .registry-search .actions-toolbar-registry-search .registry-action-btn {
+    width: 100%;
+}
+
+.giftr-search-form button {
+    width: 100%;
+}
+.giftr-registry-type-general .heading .giftr-search-form-holder {
+    padding: 20px 20px!important;
+}
+
+.giftr-container .products-grid .item.event-item {
+    width: 100% !important;
+}
+
+}
+
+.giftr-container .event-item-title {
+    height: 100%;
+}
+
+.giftr-search-form-holder .fieldset>.field:not(.choice)>.label{
+    text-align: left;
+    display: block;
+    width: 100%!important;
+   overflow: hidden;
+display: none;
+}
+
+.heading-bg {
+    border-radius: 10px;
+}
+
+.giftr-container .event-item-inner {
+    z-index: 1;
+transition: height 0.2s;
+background: rgba(191, 34, 114, 0.61);
+}
+
+.giftr-registry-type-general .heading .giftr-search-form-holder {
+    padding: 50px 50px;
+}
+
+.giftr-registry-type-general .heading .giftr-search-form-holder .giftr-search-form {
+    position: relative;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.giftr-search-form-holder i.fa.fa-calendar {
+    margin-top: 7px;
+    font-size: 20px;
+}
+
+.giftr-registry-type-general .heading .giftr-search-form-holder .giftr-search-form .registry-search .actions-toolbar-registry-search .registry-action-btn {
+    float: left;
+    padding-left: 0px;
+    border-radius: 5px;
+}
+
+.giftr-search-form input[type=text] {
+    height: 40px;
+    border-radius: 3px;
+}
+
+.giftr-search-form select {
+    height: 40px;
+    border-radius: 3px;
+    border-color: #d1d1d1;
+}
+
+.giftr-search-form button {
+    border-radius: 3px;
+    background-color: #464646;
+}
+
+.giftr-search-form button:hover {
+    background-color: #eb4697;
+}
+
+.giftr-container .item-title {
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    color:#fff;
+}
+
+.giftr-container .products-grid .item-title.event-name {
+    margin-top: 0px;
+        font-weight:600;
+}
+
+.item-title.event-name {
+    margin-top: 60px;
+        font-weight:600;
+}
+
+.event-item-title {
+    background: #eb4697ba;
+}
+
+.giftr-container .item-title {
+    background: rgba(255, 255, 255, 0);
+padding: 0px;
+}
+
+.share-block {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: 172px;
+    z-index: 11;
+}
+
+.product-item-info {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+overflow: hidden;
+}
+.products-grid.giftr .product-item-photo {
+    text-align: center;
+}
+.product-item-name {
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+strong.product-item-name {
+    float: none!important;
+    width: 100%!important;
+    text-align: center!important;
+}
+
+.product-item-name a {
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    display:block;
+    width:100%;
+    float:none;
+}
+
+.product-item-name a:hover {
+text-decoration:none;
+color:#eb4697;
+}
+
+.product-item .price-box .price {
+    font-size: 17px;
+    color: #eb4697;
+    text-align: center
+}
+
+.products-grid.giftr .product-item .price-box {
+    text-align: center;
+border-bottom: 1px solid #d1d1d1;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.giftr-items.product-items strong {
+    font-size: 12px;
+    text-align: left;
+    width: 50%;
+    display: block;
+   float:left;
+}
+
+.giftr-items.product-items li .product-item-info > span, .giftr-items.product-items li .product-item-inner > span {
+    display: block;
+    width: 50%!important;
+    text-align: right;
+    font-size: 13px;
+    font-weight: bold;
+    float: right;
+}
+
+.giftr-items.product-items .product-item-inner {
+    margin-top: 20px;
+clear: both;
+float:left;
+width: 100%;
+}
+.products-grid.giftr .product-item .box-tocart .tocart {
+    font-size: 14px;
+border-radius: 5px;
+}
+
+.giftr-items.product-items .msg {
+    width: 50%;
+    float: right;
+    position: absolute;
+    right: 15px;
+    bottom: 33px;
+    color: #ec2392;
+}
+
+h4.availability.out-of-stock {
+    font-size: 12px;
+    width: 100%;
+    float: right;
+}
+
+.control input {
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.giftr-items.product-items .note {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+span.product-image-wrapper {
+    width: 100%;
+    float: none;
+}
+
+.giftr-items.product-items span.product-image-container, .giftr-items.product-items span.product-image-wrapper {
+    width: 100%!important;
+}
+
+.box-tocart {
+    clear: both;
+padding-top: 10px;
+}

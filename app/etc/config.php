@@ -242,6 +242,7 @@ return [
         'Rokanthemes_Testimonial' => 1,
         'Rokanthemes_Themeoption' => 1,
         'Rokanthemes_VerticalMenu' => 1,
+        'Scriptlodge_UrlRewrite' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
         'Vigor_AutoProductLinks' => 1,

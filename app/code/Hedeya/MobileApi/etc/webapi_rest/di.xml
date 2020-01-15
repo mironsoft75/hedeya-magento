@@ -12,4 +12,6 @@
     <type name="Magento\Sales\Api\Data\OrderItemInterface">
         <plugin name="HedeyaMobileApiOrderItemModelPlugin" type="Hedeya\MobileApi\Plugin\OrderItemPlugin" sortOrder="1" disabled="false" />
     </type>
+ 
+
 </config>

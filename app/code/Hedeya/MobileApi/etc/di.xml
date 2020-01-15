@@ -5,6 +5,8 @@
     <preference for="Hedeya\MobileApi\Api\Data\Catalog\ExtensionOptionInterface" type="Hedeya\MobileApi\Model\Data\ExtensionOption"/>
     <preference for="Hedeya\MobileApi\Api\Data\Catalog\CategoryTreeItemInterface" type="Hedeya\MobileApi\Model\Data\CategoryTreeItem"/>
     <preference for="Hedeya\MobileApi\Api\Data\QuoteItemInterface" type="Hedeya\MobileApi\Model\Data\QuoteItem"/>
+    
+
     <!-- Uploading Categories image and icon -->
     <type name="Hedeya\MobileApi\Controller\Adminhtml\Category\Image\Upload">
         <arguments>
@@ -41,4 +43,5 @@
         </arguments>
     </virtualType>
     <preference for="Magento\Catalog\Model\Category\DataProvider" type="Hedeya\MobileApi\Model\Category\DataProvider" />
+    
 </config>
