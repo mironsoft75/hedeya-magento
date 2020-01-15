@@ -41,6 +41,22 @@ class Registry extends RegistryBase implements RegistryInterface
     {
         return $this->setData(self::KEY_UID, $uid);
     }
+    
+    /**
+     * @inheritdoc
+     */
+    public function getWebsiteId()
+    {
+        return $this->getData(self::KEY_WEBSITE_ID);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setWebsiteId($websiteId)
+    {
+        return $this->setData(self::KEY_WEBSITE_ID, $websiteId);
+    }
 
     /**
      * @inheritdoc
