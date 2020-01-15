@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <action name="erp_sync">
+                <settings>
+                    <confirm>
+                        <message translate="true">Synchronize selected items?</message>
+                        <title translate="true">Synchronize</title>
+                    </confirm>
+                    <url path="erp/products/sync"/>
+                    <type>erp_sync</type>
+                    <label translate="true">Synchronize with ERP</label>
+                </settings>
+            </action>
+        </massaction>
+    </listingToolbar>
+</listing>

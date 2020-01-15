@@ -41,6 +41,7 @@ class CatalogConnector implements ConnectorInterface
      * @param \DateTimeInterface $startDate
      * @param \DateTimeInterface $endDate
      * @return mixed
+     * @throws \SoapFault
      */
     public function getModifiedProducts(\DateTimeInterface $startDate, \DateTimeInterface $endDate)
     {
@@ -57,6 +58,29 @@ class CatalogConnector implements ConnectorInterface
         return $this->soapClient->__soapCall(
             'GetModifidItemsCompQtysInRange',
             ['AdFromDate' => $startDate->format('Y/m/d'), 'AdToDate' => $endDate->format('Y/m/d')]
+        );
+    }
+
+    /**
+     * @param string $sku
+     * @return mixed
+     * @throws \SoapFault
+     */
+    public function getItemInfoByAlu(string $sku)
+    {
+        $this->soapClient = new \SoapClient(self::MODIFIED_PRODUCTS_URI, array(
+            'debug'              => true,
+            'trace'              => true,
+            'exceptions'         => true,
+            'keep_alive'         => false,
+            'connection_timeout' => self::TIMEOUT_SECONDS,
+            'cache_wsdl'         => WSDL_CACHE_NONE,
+            'compression'        => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
+        ));
+
+        return $this->soapClient->__soapCall(
+            'GetItemInfoByALU',
+            ['AsALU' => $sku]
         );
     }
 }

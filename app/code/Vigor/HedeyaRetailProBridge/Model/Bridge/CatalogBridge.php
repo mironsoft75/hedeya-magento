@@ -55,4 +55,14 @@ class CatalogBridge implements ERPCatalogBridgeInterface
 
         return $this->productMapper->map($response);
     }
+
+    /**
+     * @param string $sku
+     * @return \SimpleXMLElement
+     * @throws \SoapFault
+     */
+    public function getItemInfoByAlu(string $sku)
+    {
+        return simplexml_load_string($this->catalogConnector->getItemInfoByAlu($sku));
+    }
 }

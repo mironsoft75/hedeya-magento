@@ -15,4 +15,9 @@ interface ERPCatalogBridgeInterface
      * @return array
      */
     public function getModifiedProducts(\DateTimeInterface $dateTime, \DateTimeInterface $endDate): array;
+    /**
+     * @param string $sku
+     * @return \SimpleXMLElement
+     */
+    public function getItemInfoByAlu(string $sku);
 }
