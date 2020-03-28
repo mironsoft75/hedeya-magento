@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="erp_integration">
         <job name="erp_update_products" instance="Vigor\ERPIntegrator\Cron\UpdateProductsCron" method="execute">
-            <schedule>0 */2 * * *</schedule>
+            <schedule>0 0-11/2,4-23/2 * * *</schedule>
         </job>
     </group>
 </config>

@@ -51,8 +51,14 @@ atlassian*
 /pub/media/theme/*
 /pub/media/theme_customization/*
 !/pub/media/theme_customization/.htaccess
-#/pub/media/wysiwyg/*
+/pub/media/wysiwyg/*
 !/pub/media/wysiwyg/.htaccess
+/pub/media/cms/*
+!/pub/media/cms/.htaccess
+/pub/media/giftr/*
+!/pub/media/giftr/.htaccess
+/pub/media/slidebanner/*
+!/pub/media/slidebanner/.htaccess
 /pub/media/tmp/*
 !/pub/media/tmp/.htaccess
 /pub/media/captcha/*
